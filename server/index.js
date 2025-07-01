@@ -54,11 +54,11 @@ app.use("/api/v1/payment", paymentRoutes);
 app.use("/api/v1/reach", contactUsRoute);
 
 // 🌐 Serving React Frontend (build)
-app.use(express.static(path.join(__dirname, "../src/build"))); // ✅ Adjusted to point to React build folder
+// app.use(express.static(path.join(__dirname, "../src/build"))); // ✅ Adjusted to point to React build folder
 
-app.get("*", (req, res) => {
-  res.sendFile(path.join(__dirname, "../src/build/index.html")); // ✅ Handles React routing
-});
+// app.get("*", (req, res) => {
+//   res.sendFile(path.join(__dirname, "../src/build/index.html")); // ✅ Handles React routing
+// });
 
 // 🟢 Default route
 app.get("/", (req, res) => {
